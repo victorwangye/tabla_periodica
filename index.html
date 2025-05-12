@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla_Periódica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="background-color: aliceblue;">
+	<header class="container">
+		<button class="filtro_btn activo" data-filter="todos" style="padding: 0 5px; margin: 1%;">Todos</button>
+		<button class="filtro_btn no_metales_btn" data-filter="no_metales" style="padding: 0 5px; margin: 1%; background-color: orange; color: white;">No metales</button>
+		<button class="filtro_btn" data-filter="gases_nobles" style="padding: 0 5px; margin: 1%; background-color: green; color: white;">Gases nobles</button>
+		<button class="filtro_btn" data-filter="halogenos" style="padding: 0 5px; margin: 1%; background-color: greenyellow;">Halógenos</button>
+		<button class="filtro_btn" data-filter="alcalinoterreos" style="padding: 0 5px; margin: 1%; background-color: yellow;">Alcalinotérreos</button>
+        <button class="filtro_btn" data-filter="metales_alcalinos" style="padding: 0 5px; margin: 1%; background-color: red; color: white;">Metaloides</button>
+        <button class="filtro_btn" data-filter="actinidos" style="padding: 0 5px; margin: 1%; background-color: rgb(92, 121, 92); color: white;">Actinidos</button>
+	    <button class="filtro_btn" data-filter="metales_alcalinos" style="padding: 0 5px; margin: 1%; background-color: blue; color: white;">Metales Alcalinos</button>
+        <button class="filtro_btn" data-filter="otros_metales" style="padding: 0 5px; margin: 1%; background-color: purple; color: white;">Otros Metales</button>
+        <button class="filtro_btn" data-filter="metales_transicion" style="padding: 0 5px; margin: 1%; background-color: rgb(33, 142, 238); color: white;">Metales de transición</button>
+	</header>
+  <div class="container-fluid text-center my-4 overflow-auto" style="min-width: 1000px;">
+    <h1 class="mb-4">Tabla Periódica</h1>
+	<div class="d-flex">
+      <div class="elemento no_metales text-white" data-bs-toggle="modal" data-bs-target="#modal_hidrogeno">
+        <div class="fila_superior">
+          <span class="numero">1</span>
+          <span class="peso">1.0</span>
+        </div>
+        <b>H</b>
+        Hidrógeno
+      </div>
+	  <div class="elemento gases_nobles text-white ms-auto" data-bs-toggle="modal" data-bs-target="#modal_helio">
+        <div class="fila_superior">
+          <span class="numero">2</span>
+          <span class="peso">4.0</span>
+        </div>
+        <b>He</b>
+        Helio
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="elemento metales_alcalinos text-white" data-bs-toggle="modal" data-bs-target="#modal_litio">
+        <div class="fila_superior">
+          <span class="numero">3</span>
+          <span class="peso">6.9</span>
+        </div>
+        <b>Li</b>
+        Litio
+      </div>
+      <div class="elemento alcalinoterreos text-black" data-bs-toggle="modal" data-bs-target="#modal_berilio">
+        <div class="fila_superior">
+          <span class="numero">4</span>
+          <span class="peso">9.0</span>
+        </div>
+        <b>Be</b>
+        Berilio
+      </div>
+      <div class="elemento metaloides text-white ms-auto">
+        <div class="fila_superior">
+          <span class="numero">5</span>
+          <span class="peso">10.8</span>
+        </div>
+        <b>B</b>
+        Boro
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">6</span>
+          <span class="peso">12.0</span>
+        </div>
+        <b>C</b>
+        Carbono
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">7</span>
+          <span class="peso">14.0</span>
+        </div>
+        <b>N</b>
+        Nitrógeno
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">8</span>
+          <span class="peso">15.9</span>
+        </div>
+        <b>O</b>
+        Oxígeno
+      </div>
+      <div class="elemento halogenos text-black">
+        <div class="fila_superior">
+          <span class="numero">9</span>
+          <span class="peso">18.9</span>
+        </div>
+        <b>F</b>
+        Flúor
+      </div>
+      <div class="elemento gases_nobles text-white">
+        <div class="fila_superior">
+          <span class="numero">10</span>
+          <span class="peso">20.1</span>
+        </div>
+        <b>Ne</b>
+        Neón
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="elemento metales_alcalinos text-white">
+        <div class="fila_superior">
+          <span class="numero">11</span>
+          <span class="peso">22.9</span>
+        </div>
+        <b>Na</b>
+        Sodio
+      </div>
+      <div class="elemento alcalinoterreos text-black">
+        <div class="fila_superior">
+          <span class="numero">12</span>
+          <span class="peso">24.3</span>
+        </div>
+        <b>Mg</b>
+        Magnesio
+      </div>
+      <div class="elemento otros_metales text-white ms-auto">
+        <div class="fila_superior">
+          <span class="numero">13</span>
+          <span class="peso">26.9</span>
+        </div>
+        <b>Al</b>
+        Aluminio
+      </div>
+      <div class="elemento metaloides text-white">
+        <div class="fila_superior">
+          <span class="numero">14</span>
+          <span class="peso">28.0</span>
+        </div>
+        <b>Si</b>
+        Silicio
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">15</span>
+          <span class="peso">30.9</span>
+        </div>
+        <b>P</b>
+        Fósforo
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">16</span>
+          <span class="peso">32.0</span>
+        </div>
+        <b>S</b>
+        Azúfre
+      </div>
+      <div class="elemento halogenos text-black">
+        <div class="fila_superior">
+          <span class="numero">17</span>
+          <span class="peso">35.0</span>
+        </div>
+        <b>Cl</b>
+        Cloro
+      </div>
+      <div class="elemento gases_nobles text-white">
+        <div class="fila_superior">
+          <span class="numero">18</span>
+          <span class="peso">39.9</span>
+        </div>
+        <b>Ar</b>
+        Argón
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="elemento metales_alcalinos text-white">
+        <div class="fila_superior">
+          <span class="numero">19</span>
+          <span class="peso">39.0</span>
+        </div>
+        <b>K</b>
+        Potasio
+      </div>
+      <div class="elemento alcalinoterreos text-black">
+        <div class="fila_superior">
+          <span class="numero">20</span>
+          <span class="peso">40.0</span>
+        </div>
+        <b>Ca</b>
+        Calcio
+      </div>
+      <div class="elemento metales_transicion text-white ms-auto">
+        <div class="fila_superior">
+          <span class="numero">21</span>
+          <span class="peso">44.9</span>
+        </div>
+        <b>Sc</b>
+        Escandio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">22</span>
+          <span class="peso">47.8</span>
+        </div>
+        <b>Ti</b>
+        Titanio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">24</span>
+          <span class="peso">51.9</span>
+        </div>
+        <b>Cr</b>
+        Cromo
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">25</span>
+          <span class="peso">54.9</span>
+        </div>
+        <b>Mn</b>
+        Manganeso
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">26</span>
+          <span class="peso">55.8</span>
+        </div>
+        <b>Fe</b>
+        Hierro
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">27</span>
+          <span class="peso">47.8</span>
+        </div>
+        <b>Ti</b>
+        Titanio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">228</span>
+          <span class="peso">58.9</span>
+        </div>
+        <b>Co</b>
+        Cobalto
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">28</span>
+          <span class="peso">58.6</span>
+        </div>
+        <b>Ni</b>
+        Níquel
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">29</span>
+          <span class="peso">63.5</span>
+        </div>
+        <b>Cu</b>
+        Cobre
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">30</span>
+          <span class="peso">47.8</span>
+        </div>
+        <b>Zn</b>
+        Zinc
+      </div>
+      <div class="elemento otros_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">31</span>
+          <span class="peso">69.7</span>
+        </div>
+        <b>Ga</b>
+        Galio
+      </div>
+      <div class="elemento metaloides text-white">
+        <div class="fila_superior">
+          <span class="numero">32</span>
+          <span class="peso">72.6</span>
+        </div>
+        <b>Ge</b>
+        Germanio
+      </div>
+      <div class="elemento metaloides text-white">
+        <div class="fila_superior">
+          <span class="numero">33</span>
+          <span class="peso">74.9</span>
+        </div>
+        <b>As</b>
+        Arsénico
+      </div>
+      <div class="elemento no_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">34</span>
+          <span class="peso">78.9</span>
+        </div>
+        <b>Se</b>
+        Selenio
+      </div>
+      <div class="elemento halogenos text-black">
+        <div class="fila_superior">
+          <span class="numero">35</span>
+          <span class="peso">79.9</span>
+        </div>
+        <b>Br</b>
+        Bromo
+      </div>
+      <div class="elemento gases_nobles text-white">
+        <div class="fila_superior">
+          <span class="numero">36</span>
+          <span class="peso">83.7</span>
+        </div>
+        <b>Kr</b>
+        Kriptón
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="elemento metales_alcalinos text-white">
+        <div class="fila_superior">
+          <span class="numero">37</span>
+          <span class="peso">85.4</span>
+        </div>
+        <b>Rb</b>
+        Rubidio
+      </div>
+      <div class="elemento alcalinoterreos text-black">
+        <div class="fila_superior">
+          <span class="numero">38</span>
+          <span class="peso">87.6</span>
+        </div>
+        <b>Sr</b>
+        Estroncio
+      </div>
+      <div class="elemento metales_transicion text-white ms-auto">
+        <div class="fila_superior">
+          <span class="numero">39</span>
+          <span class="peso">88.9</span>
+        </div>
+        <b>Y</b>
+        Itrio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">40</span>
+          <span class="peso">91.2</span>
+        </div>
+        <b>Zr</b>
+        Circonio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">41</span>
+          <span class="peso">92.9</span>
+        </div>
+        <b>Nb</b>
+        Niobio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">42</span>
+          <span class="peso">95.9</span>
+        </div>
+        <b>Mo</b>
+        Molibdeno
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">43</span>
+          <span class="peso">98.0</span>
+        </div>
+        <b>Tc</b>
+        Tecnecio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">44</span>
+          <span class="peso">101.0</span>
+        </div>
+        <b>Ru</b>
+        Rutenio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">45</span>
+          <span class="peso">102.9</span>
+        </div>
+        <b>Rh</b>
+        Rodio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">46</span>
+          <span class="peso">106.4</span>
+        </div>
+        <b>Pd</b>
+        Paladio
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">47</span>
+          <span class="peso">107.8</span>
+        </div>
+        <b>Ag</b>
+        Plata
+      </div>
+      <div class="elemento metales_transicion text-white">
+        <div class="fila_superior">
+          <span class="numero">48</span>
+          <span class="peso">112.4</span>
+        </div>
+        <b>Cd</b>
+        Cadmio
+      </div>
+      <div class="elemento otros_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">49</span>
+          <span class="peso">114.8</span>
+        </div>
+        <b>In</b>
+        Indio
+      </div>
+      <div class="elemento otros_metales text-white">
+        <div class="fila_superior">
+          <span class="numero">50</span>
+          <span class="peso">118.7</span>
+        </div>
+        <b>Sn</b>
+        Estaño
+      </div>
+      <div class="elemento metaloides text-white">
+        <div class="fila_superior">
+          <span class="numero">51</span>
+          <span class="peso">121.7</span>
+        </div>
+        <b>Sb</b>
+        Antimonio
+      </div>
+      <div class="elemento metaloides text-white">
+        <div class="fila_superior">
+          <span class="numero">52</span>
+          <span class="peso">127.6</span>
+        </div>
+        <b>Te</b>
+        Telurio
+      </div>
+      <div class="elemento halogenos text-black">
+        <div class="fila_superior">
+          <span class="numero">53</span>
+          <span class="peso">126.9</span>
+        </div>
+        <b>I</b>
+        Yodo
+      </div>
+      <div class="elemento gases_nobles text-white">
+        <div class="fila_superior">
+          <span class="numero">54</span>
+          <span class="peso">131.2</span>
+        </div>
+        <b>Xe</b>
+        Xenón
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+			<div class="elemento metales_alcalinos text-white">
+				<div class="fila_superior">
+					<span class="numero">55</span>
+					<span class="peso">132.9</span>
+				</div>
+				<b>Cs</b>
+				Cesio
+			</div>
+			<div class="elemento alcalinoterreos text-black">
+				<div class="fila_superior">
+					<span class="numero">56</span>
+					<span class="peso">137.3</span>
+				</div>
+				<b>Ba</b>
+				Bario
+			</div>
+			<div class="elemento metales_transicion text-white ms-auto">
+				<div class="fila_superior">
+					<span class="numero">71</span>
+					<span class="peso">174.9</span>
+				</div>
+				<b>Lu</b>
+				Lutecio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">72</span>
+					<span class="peso">178.4</span>
+				</div>
+				<b>Hf</b>
+				Hafnio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">73</span>
+					<span class="peso">180.9</span>
+				</div>
+				<b>Ta</b>
+				Tantalio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">74</span>
+					<span class="peso">183.8</span>
+				</div>
+				<b>W</b>
+				Wolframio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">75</span>
+					<span class="peso">186.2</span>
+				</div>
+				<b>Re</b>
+				Renio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">76</span>
+					<span class="peso">190.2</span>
+				</div>
+				<b>Os</b>
+				Osmio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">77</span>
+					<span class="peso">192.2</span>
+				</div>
+				<b>Ir</b>
+				Iridio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">78</span>
+					<span class="peso">195.1</span>
+				</div>
+				<b>Pt</b>
+				Platino
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">79</span>
+					<span class="peso">197.0</span>
+				</div>
+				<b>Au</b>
+				Oro
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">80</span>
+					<span class="peso">200.6</span>
+				</div>
+				<b>Hg</b>
+				Mercurio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">81</span>
+					<span class="peso">204.4</span>
+				</div>
+				<b>Tl</b>
+				Talio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">82</span>
+					<span class="peso">207.2</span>
+				</div>
+				<b>Pb</b>
+				Plomo
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">83</span>
+					<span class="peso">208.9</span>
+				</div>
+				<b>Bi</b>
+				Bismuto
+			</div>
+			<div class="elemento metaloides text-white">
+				<div class="fila_superior">
+					<span class="numero">84</span>
+					<span class="peso">209.0</span>
+				</div>
+				<b>Po</b>
+				Polonio
+			</div>
+			<div class="elemento halogenos text-black">
+				<div class="fila_superior">
+					<span class="numero">85</span>
+					<span class="peso">210.0</span>
+				</div>
+				<b>At</b>
+				Astato
+			</div>
+			<div class="elemento gases_nobles text-white">
+				<div class="fila_superior">
+					<span class="numero">86</span>
+					<span class="peso">222.0</span>
+				</div>
+				<b>Rn</b>
+				Radón
+			</div>
+		</div>
+    <div class="d-flex justify-content-center">
+			<div class="elemento metales_alcalinos text-white">
+				<div class="fila_superior">
+					<span class="numero">87</span>
+					<span class="peso">223.0</span>
+				</div>
+				<b>Fr</b>
+				Francio
+			</div>
+			<div class="elemento alcalinoterreos text-black">
+				<div class="fila_superior">
+					<span class="numero">88</span>
+					<span class="peso">226.0</span>
+				</div>
+				<b>Ra</b>
+				Radio
+			</div>
+		<div class="elemento metales_transicion text-white ms-auto">
+				<div class="fila_superior">
+					<span class="numero">103</span>
+					<span class="peso">262.0</span>
+				</div>
+				<b>Lr</b>
+				Lawrencio
+			</div>
+		<div class="elemento metales_transicion text-white" style="font-size: 9px;">
+				<div class="fila_superior">
+					<span class="numero">104</span>
+					<span class="peso">267.0</span>
+				</div>
+				<b>Rf</b>
+				Rutherfordio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">105</span>
+					<span class="peso">262.0</span>
+				</div>
+				<b>Db</b>
+				Dubnio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">106</span>
+					<span class="peso">267.0</span>
+				</div>
+				<b>Sg</b>
+				Seaborgio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">107</span>
+					<span class="peso">270.0</span>
+				</div>
+				<b>Bh</b>
+				Bohrio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">108</span>
+					<span class="peso">271.0</span>
+				</div>
+				<b>Hs</b>
+				Hassio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">109</span>
+					<span class="peso">270.0</span>
+				</div>
+				<b>Mt</b>
+				Meitnerio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">110</span>
+					<span class="peso">277.0</span>
+				</div>
+				<b>Ds</b>
+				Darmstadtio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">111</span>
+					<span class="peso">282.0</span>
+				</div>
+				<b>Rg</b>
+				Roentgenio
+			</div>
+			<div class="elemento metales_transicion text-white">
+				<div class="fila_superior">
+					<span class="numero">112</span>
+					<span class="peso">285.0</span>
+				</div>
+				<b>Cn</b>
+				Copernicio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">113</span>
+					<span class="peso">286.0</span>
+				</div>
+				<b>Nh</b>
+				Nihonio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">114</span>
+					<span class="peso">289.0</span>
+				</div>
+				<b>Fl</b>
+				Flerovio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">115</span>
+					<span class="peso">290.0</span>
+				</div>
+				<b>Mc</b>
+				Moscovio
+			</div>
+			<div class="elemento otros_metales text-white">
+				<div class="fila_superior">
+					<span class="numero">116</span>
+					<span class="peso">293.0</span>
+				</div>
+				<b>Lv</b>
+				Livermorio
+			</div>
+			<div class="elemento halogenos text-black">
+				<div class="fila_superior">
+					<span class="numero">117</span>
+					<span class="peso">294.0</span>
+				</div>
+				<b>Ts</b>
+				Tenesino
+			</div>
+		<div class="elemento gases_nobles text-white">
+				<div class="fila_superior">
+					<span class="numero">118</span>
+					<span class="peso">294.0</span>
+				</div>
+				<b>Og</b>
+				Oganesón
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid my-4 overflow-auto" style="min-width: 1000px;">
+    <div class="d-flex justify-content-center">
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">57</span>
+					<span class="peso">138.9</span>
+				</div>
+				<b>La</b>
+				Lantano
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">58</span>
+					<span class="peso">140.1</span>
+				</div>
+				<b>Ce</b>
+				Cerio
+			</div>
+			<div class="elemento lantanidos text-white" style="font-size: 9px;">
+				<div class="fila_superior">
+					<span class="numero">59</span>
+					<span class="peso">140.9</span>
+				</div>
+				<b>Pr</b>
+				Praseodimio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">60</span>
+					<span class="peso">144.2</span>
+				</div>
+				<b>Nd</b>
+				Neodimio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">61</span>
+					<span class="peso">145.0</span>
+				</div>
+				<b>Pm</b>
+				Prometio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">62</span>
+					<span class="peso">150.4</span>
+				</div>
+				<b>Sm</b>
+				Samario
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">63</span>
+					<span class="peso">152.0</span>
+				</div>
+				<b>Eu</b>
+				Europio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">64</span>
+					<span class="peso">157.3</span>
+				</div>
+				<b>Gd</b>
+				Gadolinio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">65</span>
+					<span class="peso">158.9</span>
+				</div>
+				<b>Tb</b>
+				Terbio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">66</span>
+					<span class="peso">162.5</span>
+				</div>
+				<b>Dy</b>
+				Disprosio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">67</span>
+					<span class="peso">164.9</span>
+				</div>
+				<b>Ho</b>
+				Holmio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">68</span>
+					<span class="peso">167.3</span>
+				</div>
+				<b>Er</b>
+				Erbio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">69</span>
+					<span class="peso">168.9</span>
+				</div>
+				<b>Tm</b>
+				Tulio
+			</div>
+			<div class="elemento lantanidos text-white">
+				<div class="fila_superior">
+					<span class="numero">70</span>
+					<span class="peso">173.0</span>
+				</div>
+				<b>Yb</b>
+				Iterbio
+			</div>
+		</div>
+    <div class="d-flex justify-content-center">
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">89</span>
+					<span class="peso">227.0</span>
+				</div>
+				<b>Ac</b>
+				Actinio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">90</span>
+					<span class="peso">232.0</span>
+				</div>
+				<b>Th</b>
+				Torio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">91</span>
+					<span class="peso">231.0</span>
+				</div>
+				<b>Pa</b>
+				Protactinio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">92</span>
+					<span class="peso">238.0</span>
+				</div>
+				<b>U</b>
+				Uranio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">93</span>
+					<span class="peso">237.0</span>
+				</div>
+				<b>Np</b>
+				Neptunio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">94</span>
+					<span class="peso">244.0</span>
+				</div>
+				<b>Pu</b>
+				Plutonio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">95</span>
+					<span class="peso">243.0</span>
+				</div>
+				<b>Am</b>
+				Americio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">96</span>
+					<span class="peso">247.0</span>
+				</div>
+				<b>Cm</b>
+				Curio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">97</span>
+					<span class="peso">247.0</span>
+				</div>
+				<b>Bk</b>
+				Berkelio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">98</span>
+					<span class="peso">251.0</span>
+				</div>
+				<b>Cf</b>
+				Californio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">99</span>
+					<span class="peso">252.0</span>
+				</div>
+				<b>Es</b>
+				Einstenio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">100</span>
+					<span class="peso">257.0</span>
+				</div>
+				<b>Fm</b>
+				Fermio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">101</span>
+					<span class="peso">258.0</span>
+				</div>
+				<b>Md</b>
+				Mendelevio
+			</div>
+			<div class="elemento actinidos text-white">
+				<div class="fila_superior">
+					<span class="numero">102</span>
+					<span class="peso">259.0</span>
+				</div>
+				<b>No</b>
+				Nobelio
+			</div>
+		</div>
+	</div>  
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card shadow">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Mendeleev_Photographische_Gesellschaft_3.jpg" class="card_img" alt="Dmitri Mendeléyev">
+					<div class="card-body">
+						<h5 class="card-title">Dmitri Mendeléyev</h5>
+						<p class="card-text">Creador de la primera tabla periódica moderna en 1869. Predijo propiedades de elementos aún no descubiertos.</p>
+						<a href="https://es.wikipedia.org/wiki/Dmitri_Mendel%C3%A9yev" class="btn btn-primary">Ver más</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card shadow">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Henry_Moseley_%281887-1915%29.jpg" class="card_img" alt="Henry Moseley">
+					<div class="card-body">
+						<h5 class="card-title">Henry Moseley</h5>
+						<p class="card-text">Estableció el número atómico como el verdadero criterio para ordenar la tabla periódica mediante espectroscopía.</p>
+						<a href="https://es.wikipedia.org/wiki/Henry_Moseley" class="btn btn-primary">Ver más</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card shadow">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Glenn_Seaborg_-_1964.jpg" class="card_img" alt="Glenn Seaborg">
+					<div class="card-body">
+						<h5 class="card-title">Glenn T. Seaborg</h5>
+						<p class="card-text">Reorganizó la tabla para incluir los actínidos y descubrió varios elementos transuránicos como el plutonio.</p>
+						<a href="https://es.wikipedia.org/wiki/Glenn_T._Seaborg" class="btn btn-primary">Ver más</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="modal fade" id="modal_hidrogeno" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Hidrógeno</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<img src="https://www.foronuclear.org/wp-content/uploads/2020/03/hidrogeno-1-854x465.jpg" alt="hidrógeno" class="img-fluid" />
+				<div class="modal-body">El hidrógeno es el primer elemento de la tabla periódica. Es el elemento químico más ligero que existe y el más abundante del universo, su átomo está formado por un protón y un electrón.</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal_helio" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Helio</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<img src="https://static.wikia.nocookie.net/quimica/images/6/6a/Helio.JPG/revision/latest?cb=20090808203808&path-prefix=es" alt="helio" class="img-fluid" />
+				<div class="modal-body">El helio (He) es un elemento químico de número atómico 2. Es un gas noble incoloro, inodoro e inerte. El helio es el segundo elemento químico más ligero después del hidrógeno. Se utiliza en globos, dirigibles y en sistemas de enfriamiento, como en los imanes de resonancia magnética.</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal_litio" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Litio</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<img src="https://content.nationalgeographic.com.es/medio/2022/09/22/petalitamineral-de-aluminosilicato-de-litio_8c429b49_1280x853.jpg" alt="litio" class="img-fluid" />
+				<div class="modal-body">El litio es un elemento químico de número atómico 3. Metal blando y plateado, muy reactivo. Se usa en baterías recargables, medicamentos para trastornos del ánimo y aleaciones livianas.</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal_berilio" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Berilio</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<img src="https://i0.wp.com/www.periodictable.com/Samples/004.1/s13.JPG" alt="berilio" class="img-fluid" />
+				<div class="modal-body">El berilio representado por Be es un elemento químico de número atómico 4. Es un metal duro y liviano. Se emplea en aleaciones para componentes aeroespaciales y en instrumentos científicos debido a su rigidez y conductividad térmica.</div>
+			</div>
+		</div>
+	</div>
+	<script src="filtrado.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>    
+</html>

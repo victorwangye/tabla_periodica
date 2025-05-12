@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* estilos para movil */
+@media (min-width: 0px) and (max-width: 1000px) {
+  .elemento{
+    padding: 6px;
+    text-align: center;
+    font-size: 8px;
+    height: 55px;
+    width: 55px;
+    margin: 0.1%;
+    border-radius: 8px;
+  }
+  b{
+    font-size: 12px;
+  }
+  .card_img{
+    height: 160px; 
+    object-fit: cover;
+    object-position: 0 25%;
+  }
+}
+
+/* estilos para tablet */
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .elemento{
+    padding: 6px;
+    text-align: center;
+    font-size: 8px;
+    height: 50px;
+    width: 50px;
+    margin: 0.1%;
+    border-radius: 8px;
+  }
+  b{
+    font-size: 12px;
+  }
+  .card_img{
+    height: 160px; 
+    object-fit: cover;
+    object-position: 0 25%;
+  }
+}
+/* estilos para pc mediano */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .elemento{
+    padding: 6px;
+    text-align: center;
+    font-size: 8px;
+    height: 55px;
+    width: 55px;
+    margin: 0.1%;
+    border-radius: 8px;
+  }
+  b{
+    font-size: 14px;
+  }
+  .card_img{
+    height: 200px; 
+    object-fit: cover;
+    object-position: 0 25%;
+  }
+}
+/* estilos para PC */
+@media (min-width: 1400px) {
+  .elemento{
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    height: 65px;
+    width: 65px;
+    margin: 0.2%;
+    border-radius: 8px;
+  }
+  b{
+    font-size: 16px;
+  }
+  .card_img{
+    height: 200px; 
+    object-fit: cover;
+    object-position: 0 25%;
+  }
+}
+
+.no_metales{
+    background-color: orange;
+}
+.gases_nobles{
+  background-color: green;
+}
+.metales_alcalinos{
+  background-color: blue;
+}
+.alcalinoterreos{
+  background-color: yellow;
+}
+.metaloides{
+  background-color: red;
+}
+.halogenos{
+  background-color: greenyellow;
+}
+.otros_metales{
+  background-color: purple;
+}
+.metales_transicion{
+  background-color: rgb(33, 142, 238);
+}
+.lantanidos{
+  background-color: rgb(175, 213, 118);
+}
+.actinidos{
+  background-color: rgb(92, 121, 92);
+}
+
+.elemento{
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: relative;
+}
+.elemento:hover{
+  z-index: 9;
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.fila_superior{
+  display: flex;
+  justify-content: space-between;
+}
+.numero{
+  text-align: start;
+}
+.peso{
+  text-align: end;
+}
